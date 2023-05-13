@@ -62,9 +62,34 @@ D7 = X Y Z
 ### PROGRAM 
 /*
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: S.IYYANAR
+RegisterNumber: 212222240036
 */
+## encoder;
+```
+module exp8(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+output a,b,c;
+input d0,d1,d2,d3,d4,d5,d6,d7;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
+```
+## decoder
+```
+module dec(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+output d0,d1,d2,d3,d4,d5,d6,d7;
+input a,b,c;
+assign d0=(~a & ~b & ~c) ;
+assign d1=(~a & ~b &c);
+assign d2=(~a & b &~c);
+assign d3=(~a & b &c);
+assign d4=(a &~b&~c);
+assign d5=(a &~b&c);
+assign d6=(a&b&~c);
+assign d7=(a&b&c);
+endmodule
+```
 
 
 
@@ -72,6 +97,10 @@ RegisterNumber:
 
 
 ### RTL LOGIC  
+## encoder:
+![encoder 2](https://github.com/Iyyanar22009120/Experiment-08-Encoders-and-decoders-/assets/118680259/03328701-b4e4-463b-8e49-a390226bd418)
+## decoder:
+![decoder 2](https://github.com/Iyyanar22009120/Experiment-08-Encoders-and-decoders-/assets/118680259/806a33e4-0b81-4ecd-9bcf-7fe2248be021)
 
 
 
@@ -81,12 +110,19 @@ RegisterNumber:
 
 
 ### TIMING DIGRAMS  
+## encoder:
+![encoder 1](https://github.com/Iyyanar22009120/Experiment-08-Encoders-and-decoders-/assets/118680259/fb5931d0-6865-4f9c-a735-f4bdc0b71c85)
 
-
+## decoder:
+![decoder 1](https://github.com/Iyyanar22009120/Experiment-08-Encoders-and-decoders-/assets/118680259/b27d01e7-5cf1-45ab-9efb-431c5f8ac853)
 
 
 
 ### TRUTH TABLE 
+## encoder;
+![truth encoder](https://github.com/Iyyanar22009120/Experiment-08-Encoders-and-decoders-/assets/118680259/242c6de2-7434-43df-822d-51693bebefa7)
+## decoder:
+![truth decoder](https://github.com/Iyyanar22009120/Experiment-08-Encoders-and-decoders-/assets/118680259/3420b927-971d-40a8-8c24-bbdae03d7163)
 
 
 
