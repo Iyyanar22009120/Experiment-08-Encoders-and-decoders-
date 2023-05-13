@@ -60,11 +60,11 @@ D7 = X Y Z
 
 
 ### PROGRAM 
-/*
+```
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
 Developed by: S.IYYANAR
 RegisterNumber: 212222240036
-*/
+```
 ## encoder;
 ```
 module exp8(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
@@ -130,3 +130,4 @@ endmodule
 
 
 ### RESULTS 
+Thus 8 to 3 Encoder and 3to8 Decoder are implemented successfully using verilog and validate its outputs.
